@@ -11,7 +11,12 @@ class Person{
   }
 
   public function setAge($age){
-    $this->age=$age;
+    if ($age >= 18){
+      $this->age=$age;
+    }
+    else {
+      throw new Exception("Age can't be below 18!", 1);
+    }
   }
 
   public function getAge(){
@@ -25,6 +30,6 @@ class Person{
 }
 
 $joe=new Person ('Joe');
-$joe->setAge(219);
+$joe->setAge(19);
 var_dump($joe);
  ?>
