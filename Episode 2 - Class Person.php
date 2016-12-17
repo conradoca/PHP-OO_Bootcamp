@@ -2,9 +2,9 @@
 
 class Person{
 
-  private $name;
+  protected $name;
 
-  private $age=0;
+  protected $age=0;
 
   public function __construct($name){
     $this->name=$name;
